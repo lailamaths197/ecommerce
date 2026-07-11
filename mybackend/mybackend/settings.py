@@ -62,7 +62,7 @@ DATABASES = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://ecommerce-frontend-v6yb.onrender.com"
+    "https://ecommerce-frontend-v6yb.onrender.com",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "https://onrender.com",
