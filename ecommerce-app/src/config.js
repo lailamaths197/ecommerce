@@ -1,5 +1,5 @@
 export const API_BASE_URL = import.meta.env.PROD 
-  ? 'https://onrender.com'  // Replace with your Render backend URL later
+  ? 'https://ecommerce-pcg5.onrender.com'  // Replace with your Render backend URL later
   : 'http://localhost:8000/api'; 
 
 // Currency formatting standard utility using Rupee symbol formatting logic
