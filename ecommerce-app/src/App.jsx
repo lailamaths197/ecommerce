@@ -85,7 +85,7 @@ export default function App() {
     };
 
     try {
-      const response = await fetch('https://onrender.com', {
+      const response = await fetch('https://ecommerce-pcg5.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newOrder)
