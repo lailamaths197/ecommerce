@@ -52,10 +52,10 @@ WSGI_APPLICATION = 'mybackend.wsgi.application'
 
 # Native Embedded SQLite Configuration Engine 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 # Cross-Origin Permission List for Vite Server instances
@@ -64,6 +64,13 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
     "https://ecommerce-frontend-v6yb.onrender.com"
 ]
+CSRF_TRUSTED_ORIGINS = [
+    "https://onrender.com",
+    "https://onrender.com",
+]
+
+# Secondary fallback protection safety valve
+CORS_ALLOW_ALL_ORIGINS = True 
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
