@@ -70,4 +70,12 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 STATIC_URL = 'static/'
+# This forces Django to build an absolute filesystem path for compilation
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Optional but recommended for WhiteNoise to find app static assets securely
+STATICFILES_DIRS = [
+    # Include this only if you have a global static folder in your project root
+    # os.path.join(BASE_DIR, 'static'), 
+]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
